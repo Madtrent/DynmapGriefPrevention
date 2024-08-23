@@ -1,0 +1,14 @@
+name: DynmapGriefPrevention
+version: '1.0.0-beta1'
+authors: ['madtrent']
+depend: ['dynmap', 'GriefPrevention']
+softdepend: [Vault]
+main: net.crypticmc.dynmapgriefprevention.DynmapGriefPrevention
+api-version: '1.18'
+
+
+commands:
+  dynmapgp:
+    description: Main command for DynmapGriefPrevention.
+    usage: /dynmapgp reload
+    permission: dynmapgp.reload

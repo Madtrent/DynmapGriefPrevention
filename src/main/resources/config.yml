@@ -1,0 +1,135 @@
+## Dynmap-GriefPrevention configuration
+#
+#update:
+#
+#  # Seconds between checks for claim updates
+#  period: 300
+#
+#layer:
+#  name: "GriefPrevention"
+#
+#  # Make mobs layer hidden by default
+#  hidebydefault: false
+#
+#  # ordering priority in layer menu (low goes before high - default is 0)
+#  layerprio: 0
+#
+#  # (optional) set minimum zoom level before layer is visible (0 = defalt, always visible)
+#  minzoom: 0
+#
+## Set true to show 3D volumes for zones
+#use3dregions: false
+#
+## Format for popup - substitute values for macros
+#infowindow: '<div class=\"infowindow\">Claim Owner: <span style=\"font-weight:bold;\">%owner%</span><br/>Permission Trust: <span style=\"font-weight:bold;\">%managers%</span><br/>Trust: <span style=\"font-weight:bold;\">%builders%</span><br/>Container Trust: <span style=\"font-weight:bold;\">%containers%</span><br/>Access Trust: <span style=\"font-weight:bold;\">%accessors%</span></div>'
+#
+#adminclaiminfowindow: '<div class=\"infowindow\"><span style=\"font-weight:bold;\">Administrator Claim</span><br/>Permission Trust: <span style=\"font-weight:bold;\">%managers%</span><br/>Trust: <span style=\"font-weight:bold;\">%builders%</span><br/>Container Trust: <span style=\"font-weight:bold;\">%containers%</span><br/>Access Trust: <span style=\"font-weight:bold;\">%accessors%</span></div>'
+#
+#
+#regionstyle:
+#  strokeColor: "#FF0000"
+#  strokeOpacity: 0.8
+#  strokeWeight: 3
+#  fillColor: "#FF0000"
+#  fillOpacity: 0.35
+#
+## Optional list for defining the claims to be shown.  If list is non-empty, only claims matching one of the list strings are shown:
+## Values can include '<username>' (claims owned by given user), 'world:<worldid>' (all claims on a specific world),
+## '<worldid>/<username>' (claims owned by a given user on a given world).  Administrator claims are owned by 'administrator'.
+#visibleregions: []
+#
+## Optional list for restricting the claims shown.  If list is non-empty, any claims matching one of the list strings are not shown:
+## Values can include '<username>' (claims owned by given user), 'world:<worldid>' (all claims on a specific world),
+## '<worldid>/<username>' (claims owned by a given user on a given world).  Administrator claims are owned by 'administrator'.
+#hiddenregions: []
+#
+## Optional per-owner overrides for regionstyle (Administrator claims are owned by 'administrator')
+#ownerstyle:
+#  administrator:
+#    strokeColor: "#0000FF"
+#    fillColor: "#0000FF"
+#
+#debug: false
+# General settings
+
+
+#use3dregions: false
+#debug: false
+#
+## Info window templates
+#infowindow: '<div class="infowindow">Claim Owner: <span style="font-weight:bold;">%rank% %owner%</span><br/>Rank: <span style="font-weight:bold;">%rank%</span><br/>Permission Trust: <span style="font-weight:bold;">%managers%</span><br/>Trust: <span style="font-weight:bold;">%builders%</span><br/>Container Trust: <span style="font-weight:bold;">%containers%</span><br/>Access Trust: <span style="font-weight:bold;">%accessors%</span></div>'
+#adminclaiminfowindow: '<div class="infowindow"><span style="font-weight:bold;">Administrator Claim</span></div>'
+#
+## Default region style for all claims
+#regionstyle:
+#  strokeColor: '#FF0000'    # Default stroke color (red)
+#  strokeOpacity: 0.8        # Stroke opacity
+#  strokeWeight: 3           # Stroke weight
+#  fillColor: '#FF0000'      # Default fill color (red)
+#  fillOpacity: 0.35         # Fill opacity
+#
+## Admin claim style
+#adminstyle:
+#  strokeColor: '#FF0000'    # Admin stroke color (red)
+#  strokeOpacity: 0.8        # Admin stroke opacity
+#  strokeWeight: 3           # Admin stroke weight
+#  fillColor: '#FFAAAA'      # Admin fill color (light red)
+#  fillOpacity: 0.35         # Admin fill opacity
+#
+## Control which regions are visible on the map
+#visibleregions:
+#  - world:world
+#  - exampleOwner
+#
+## Control which regions are hidden on the map
+#hiddenregions:
+#  - world:anotherWorld
+#  - hiddenOwner
+#
+## Dynmap layer settings
+#layer:
+#  name: GriefPrevention
+#  minzoom: 0
+#  layerprio: 10
+#  hidebydefault: false
+#
+## Update settings for the plugin
+#update:
+#  period: 300  # Time in seconds between updates
+
+use3dregions: false
+debug: false
+infowindow: '<div class="infowindow"><span style="font-weight:bold;">%rank% %owner%''s Claim</span><br/>Trusted: <span style="font-weight:bold;">%accessors%</span></div>'
+adminclaiminfowindow: '<div class="infowindow"><span style="font-weight:bold;">Administrator Claim LOL</span></div>'
+regionstyle:
+  strokeColor: '#FF0000'
+  strokeOpacity: 0.8
+  strokeWeight: 3
+  fillColor: '#FF0000'
+  fillOpacity: 0.35
+adminstyle:
+  strokeColor: '#00FF00'
+  strokeOpacity: 0.8
+  strokeWeight: 3
+  fillColor: '#00FF00'
+  fillOpacity: 0.35
+visibleregions:
+  - world:world
+hiddenregions:
+  - world:anotherWorld
+layer:
+  name: GriefPrevention
+  minzoom: 0
+  layerprio: 10
+  hidebydefault: false
+update:
+  period: 300 # Time in seconds between updates
+
+placeholderdefaults:
+  rank: "Unknown"
+  trust: "No trusted players"
+  accessors: "None"
+  owner: "unknown"
+  managers: "None"
+  builders: "None"
+  containers: "None"
